@@ -1,0 +1,19 @@
+apiVersion: metal3.io/v1alpha1
+kind: BareMetalHost
+metadata:
+  name: sno-w1
+  namespace: edwin-home
+  annotations:
+    inspect.metal3.io: disabled
+    bmac.agent-install.openshift.io/hostname: "sno-w1"
+  labels:
+    infraenvs.agent-install.openshift.io: edwin-home
+spec:
+  online: true
+  automatedCleaningMode: disabled
+  bootMACAddress: <your-mac-address>  4
+  bmc:
+    address: <machine-address> 5
+    credentialsName: <bmc-secret-name> 6
+  rootDeviceHints:
+    deviceName: /dev/sda 7
