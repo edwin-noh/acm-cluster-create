@@ -1,0 +1,25 @@
+---
+apiVersion: agent.open-cluster-management.io/v1
+kind: KlusterletAddonConfig
+metadata:
+  name: edwin-home
+  namespace: edwin-home
+spec:
+  applicationManager:
+#    argocdCluster: false
+    enabled: true
+  certPolicyController:
+    enabled: true
+  clusterLabels:
+    name: edwin-home
+    cloud: auto-detect
+    vendor: auto-detect
+  clusterName: sno-worker1
+  clusterNamespace: edwin-home
+  iamPolicyController:
+    enabled: true
+  policyController:
+    enabled: true
+  searchCollector:
+    enabled: true
+  version: 2.6.2

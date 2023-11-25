@@ -13,31 +13,6 @@ spec:
   ipxeScriptType: DiscoveryImageAlways
   nmStateConfigLabelSelector:
     matchLabels:
-      infraenvs.agent-install.openshift.io: edwin-home
+      edwin-home-nmstate-label: sno-worker1
   pullSecretRef:
     name: pullsecret-edwin-home
-status:
-  agentLabelSelector:
-    matchLabels:
-      infraenvs.agent-install.openshift.io: edwin-home
-  bootArtifacts:
-    initrd: >-
-      https://assisted-image-service-multicluster-engine.apps.ocp4-hub.edwin.home/images/054123c3-bbfe-4196-94c1-f70c8385591d/pxe-initrd?api_key=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZyYV9lbnZfaWQiOiIwNTQxMjNjMy1iYmZlLTQxOTYtOTRjMS1mNzBjODM4NTU5MWQifQ.KOOvFJ3BxGIkOb9gAzVSU15b1Xqh8BvEflMudl9hhlj9Pr4A_gcY-rbZawYRVOnzbJYeTil7HH4lI_3PYiLgOg&arch=x86_64&version=4.13
-    ipxeScript: >-
-      https://assisted-service-multicluster-engine.apps.ocp4-hub.edwin.home/api/assisted-install/v2/infra-envs/054123c3-bbfe-4196-94c1-f70c8385591d/downloads/files?api_key=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZyYV9lbnZfaWQiOiIwNTQxMjNjMy1iYmZlLTQxOTYtOTRjMS1mNzBjODM4NTU5MWQifQ.hT_ryJrrb1hP_p8OsuIfDN7ORcnIWl9TKaK02W3degeNYkM8VCang9bQZHXTKf8gIGLA_H63YhVQU-IXuGO8yQ&file_name=ipxe-script
-    kernel: >-
-      https://assisted-image-service-multicluster-engine.apps.ocp4-hub.edwin.home/boot-artifacts/kernel?arch=x86_64&version=4.13
-    rootfs: >-
-      https://assisted-image-service-multicluster-engine.apps.ocp4-hub.edwin.home/boot-artifacts/rootfs?arch=x86_64&version=4.13
-  conditions:
-    - lastTransitionTime: '2023-11-18T08:28:55Z'
-      message: Image has been created
-      reason: ImageCreated
-      status: 'True'
-      type: ImageCreated
-  createdTime: '2023-11-18T08:27:49Z'
-  debugInfo:
-    eventsURL: >-
-      https://assisted-service-multicluster-engine.apps.ocp4-hub.edwin.home/api/assisted-install/v2/events?api_key=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZyYV9lbnZfaWQiOiIwNTQxMjNjMy1iYmZlLTQxOTYtOTRjMS1mNzBjODM4NTU5MWQifQ.dMsUywW34ipqKhSbLUQjo64P1ye2uJVb8iJJb8FT3B3RZLe--NbSyaBvaDvYDdm_4mPoozRGKVqO0x8hzCUuTQ&infra_env_id=054123c3-bbfe-4196-94c1-f70c8385591d
-  isoDownloadURL: >-
-    https://assisted-image-service-multicluster-engine.apps.ocp4-hub.edwin.home/images/054123c3-bbfe-4196-94c1-f70c8385591d?api_key=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZyYV9lbnZfaWQiOiIwNTQxMjNjMy1iYmZlLTQxOTYtOTRjMS1mNzBjODM4NTU5MWQifQ.NgIJsVUo5L8r3RycgPwkbpei0CQ_oFz64-iopZU4jdke0BvwHn62vbN7xJvklZ88RzXLSzjuiJQRE6-Acet0_A&arch=x86_64&type=minimal-iso&version=4.13

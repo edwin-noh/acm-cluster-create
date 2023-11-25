@@ -1,0 +1,11 @@
+virt-install \
+    --name sno-woker01 \
+    --vcpus 8 \
+    --memory 32768 \
+    --os-variant rhel8.0 \
+    --graphics type=vnc \
+    --cpu host \
+    --events on_reboot=restart \
+    --disk pool=ocp-nodes,size=120,format=qcow2,bus=virtio \
+    --boot hd,cdrom \
+    --print-xml > $tmpfile

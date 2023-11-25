@@ -11,9 +11,9 @@ metadata:
 spec:
   online: true
   automatedCleaningMode: disabled
-  bootMACAddress: <your-mac-address>  4
+  bootMACAddress: 52:54:00:96:2b:f5 52:54:00:63:eb:f4
   bmc:
-    address: <machine-address> 5
-    credentialsName: <bmc-secret-name> 6
+    address: <machine-address>
+    credentialsName: <bmc-secret-name>
   rootDeviceHints:
-    deviceName: /dev/sda 7
+    deviceName: /dev/sda
