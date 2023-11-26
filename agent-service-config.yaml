@@ -21,3 +21,9 @@ spec:
     resources:
       requests:
         storage: 50Gi
+  osImages:
+  - openshiftVersion: "4.14"
+    version: "414.92.202310170514-0"
+    rootFSUrl: http://192.168.31.10:8080/ocp-414/rhcos-4.14.0-x86_64-live-rootfs.x86_64.img
+    url: http://192.168.31.10:8080/ocp-414/rhcos-4.14.0-x86_64-live.x86_64.iso
+    cpuArchitecture: "x86_64"

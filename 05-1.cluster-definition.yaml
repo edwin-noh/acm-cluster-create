@@ -14,7 +14,7 @@ spec:
     name: edwin-home
     cloud: auto-detect
     vendor: auto-detect
-  clusterName: sno-worker1
+  clusterName: sno-worker01
   clusterNamespace: edwin-home
   iamPolicyController:
     enabled: true

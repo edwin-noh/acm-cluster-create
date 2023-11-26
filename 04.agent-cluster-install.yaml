@@ -1,0 +1,30 @@
+apiVersion: extensions.hive.openshift.io/v1beta1
+kind: AgentClusterInstall
+metadata:
+  name: sno-worker01
+  namespace: edwin-home
+  # annotations:
+  #   agent-install.openshift.io/install-config-overrides: '{"networking":{"networkType":"OVNKubernetes"}}'
+  #   argocd.argoproj.io/sync-wave: '1'
+  # labels:
+  #   app.kubernetes.io/instance: clusters
+spec:
+  clusterDeploymentRef:
+    name: sno-worker01
+  imageSetRef:
+    name: openshift-v4.14.2
+#  manifestsConfigMapRef:
+#    name: sushi
+#  mirrorRegistryRef:
+#    name: quay-mirror-config
+  networking:
+    clusterNetwork:
+      - cidr: 10.128.0.0/14
+        hostPrefix: 23
+    machineNetwork:
+      - cidr: 192.168.31.208/28
+    serviceNetwork:
+      - 172.30.0.0/16
+  provisionRequirements:
+    controlPlaneAgents: 1
+  sshPublicKey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDQpLkHa8nwcnf06MYVPc1OmiPigA54orXluV4oDqOHID9e9J7Av90jFGGfOytpYUbqVoCDBnOjyvSclIR4CqnmclnBFujLPuXeXwEK3h80jx1OVvCiAMGghvo1jI988X9pCeE+y3fOSph7Ua2T3xKn9vqz5WOktBnHnfJe6FPxe0JCFxejuNAswn543aLF1ZopkKQlIBYkrjt29a4sc5DygGvF0v7F+cRDH7F7GvPxRDFFVwbjEJ9WqCcDeA2MS91xDihtklCRPtJKbrqE0toCLBDzO8y+EpqI2nK6LMJXyNcCuR528/7Js7eYqCPblhbn3c8kNEv6f+Zn+TH1ddjTNefvYSXoqE2pJtyU1n1d2ub9LtPHnaRmwaO9CbUNuwKvzfXu6NwJpTrff8w/ty7J+iY4kLZOBdg35RQjrgLrrEngnwL7ikSoz3ET1bjQ7TG1B41KrTRG/Swiw7wncKtVQjil5lRm3kORYBMxC58+NGelWyxbl6Oas1IkiCl0nZetdNfY1RLNzr5o9Aigf/dNztUj0FvrY5pqNlFhFqWP8GLDen63I9ISY7bM2gA/AsA9KdJ/1nZJZ6hJR246r2CxhPGGI171AaESW3PWQMV1TkcyPrke5l2/KbP92gJ2IMxVR8IG/miZAA36dixS3J/9/uNNKWUABzPtoIS/HCIYNQ== root@bastion.edwin.home
