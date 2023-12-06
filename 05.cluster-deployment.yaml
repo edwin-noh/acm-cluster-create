@@ -2,7 +2,7 @@ apiVersion: hive.openshift.io/v1
 kind: ClusterDeployment
 metadata:
   name: sno-worker01
-  namespace: edwin-home
+  namespace: sno-worker01
 spec:
   baseDomain: edwin.home
   clusterName: sno-worker01

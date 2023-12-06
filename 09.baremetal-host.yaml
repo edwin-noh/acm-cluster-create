@@ -1,20 +1,20 @@
 apiVersion: metal3.io/v1alpha1
-kind: BareMetalHost
+kind: BareMetalHost 
 metadata:
   name: sno-worker01
-  namespace: edwin-home
+  namespace: sno-worker01
   annotations:
     inspect.metal3.io: disabled
     bmac.agent-install.openshift.io/hostname: "sno-worker01"
   labels:
-    infraenvs.agent-install.openshift.io: edwin-home
+    infraenvs.agent-install.openshift.io: sno-worker01
 spec:
   online: true
   automatedCleaningMode: metadata
-  bootMACAddress: 52:54:00:76:03:25
+  bootMACAddress: '52:54:00:49:ba:ed'
   bootMode: UEFI
   bmc:
-    address: redfish-virtualmedia+http://192.168.31.20:8000/redfish/v1/Systems/437e3c20-5040-4426-8e07-0882cd723134
+    address: redfish-virtualmedia+http://192.168.31.20:8000/redfish/v1/Systems/7a948ca4-04a4-43dc-bdbc-150bf54769b7
     credentialsName: sushy-secret
     disableCertificateVerification: true
   rootDeviceHints:

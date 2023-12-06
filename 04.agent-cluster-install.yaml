@@ -2,9 +2,9 @@ apiVersion: extensions.hive.openshift.io/v1beta1
 kind: AgentClusterInstall
 metadata:
   name: sno-worker01
-  namespace: edwin-home
-  # annotations:
-  #   agent-install.openshift.io/install-config-overrides: '{"networking":{"networkType":"OVNKubernetes"}}'
+  namespace: sno-worker01
+  annotations:
+    agent-install.openshift.io/install-config-overrides: '{"networking":{"networkType":"OVNKubernetes"}}'
   #   argocd.argoproj.io/sync-wave: '1'
   # labels:
   #   app.kubernetes.io/instance: clusters
@@ -22,7 +22,7 @@ spec:
       - cidr: 10.128.0.0/14
         hostPrefix: 23
     machineNetwork:
-      - cidr: 192.168.31.208/28
+      - cidr: 192.168.31.100/30
     serviceNetwork:
       - 172.30.0.0/16
   provisionRequirements:

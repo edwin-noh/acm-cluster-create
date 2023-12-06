@@ -1,0 +1,15 @@
+<network>
+  <name>sno-workers</name>
+  <forward mode="route"/>
+  <bridge name="virbr2" stp='on' delay='0'/>
+  <domain name='edwin.home'/>
+  <dns enable='yes'>
+    <forwarder domain='edwin.home' addr='192.168.31.10'/>
+  </dns>
+  <ip address="192.168.31.100" netmask="255.255.255.252">
+    <dhcp>
+      <range start="192.168.31.101" end="192.168.31.102"/>
+      <host mac='52:54:00:49:ba:ed' name='sno-worker01' ip='192.168.31.101'/>
+    </dhcp>
+  </ip>
+</network>

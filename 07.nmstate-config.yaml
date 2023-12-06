@@ -2,7 +2,7 @@ apiVersion: agent-install.openshift.io/v1beta1
 kind: NMStateConfig
 metadata:
   name: sno-worker01
-  namespace: edwin-home
+  namespace: sno-worker01
   labels:
     cluster-name: sno-worker01
 spec:
@@ -11,11 +11,11 @@ spec:
       - name: enp1s0
         type: ethernet
         state: up
-        mac-address: '52:54:00:76:03:25'
+        mac-address: '52:54:00:49:ba:ed'
         ipv4:
           enabled: true
           address:
-            - ip: 192.168.31.220
+            - ip: 192.168.31.101
               prefix-length: 24
           dhcp: false          
         ipv6:
@@ -32,4 +32,4 @@ spec:
           table-id: 254
   interfaces:
     - name: "enp1s0"
-      macAddress: '52:54:00:76:03:25'
+      macAddress: '52:54:00:49:ba:ed'
